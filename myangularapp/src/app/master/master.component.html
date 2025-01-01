@@ -1,0 +1,42 @@
+<p>master works!</p>
+<p>{{firstName}}</p>
+<p>{{year}}</p>
+<p>{{isActive}}</p>
+<p>{{currentDate}}</p>
+<img [src]="imageUrl"/>
+<input [(ngModel)]="firstName" placeholder="Enter your name"/>
+<p>Hello, {{firstName}}!</p>
+<button class="btn btn-success"(click)="angularButtonclicked()">Angular</button>
+<button class="btn btn-success"(click)="buttonclicked('react button is clicked')">React</button>
+
+<div *ngIf="!isListEmpty;else noItems">
+<h3>Item List:</h3>
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+</div>
+<ng-template #noItems>
+    <p>No items available in the list</p>
+</ng-template>
+<div>
+    <h2>Angular ngClass and ngStyle Example</h2>
+    <button (click)="toggleHighlight()">Toggle Highlight</button>
+    <div
+        [ngClass]="{'highlight':isHighlighted,'bold':isBold}"
+        [ngStyle]="{'color':textColor,'font-size.px':fontSize}">
+    This is styled text!</div>
+    </div>
+<h1>{{message}}</h1>
+<nav class="navbar navbar-expand-sm bg-light">
+    <div class="container-fluid">
+    <ul class="navbar-nav me-auto">
+    <li class="nav-item col-12">
+        <a class="nav-link" routerLink="" routerLinkActive="active" >Home</a>
+    </li>
+    <li class="nav-item col-12">
+        <a class="nav-link" routerLink="gallery" routerLinkActive="active" >Gallery</a>
+    </li>
+</ul>
+<a class="btn btn-primary" routerLink="login">login</a>
+</div>
+</nav>
